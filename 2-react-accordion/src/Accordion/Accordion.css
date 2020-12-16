@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  background-color: ghostwhite;
+}
+main {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin: 3rem auto;
+}
+section {
+  background-color: #fff;
+  width: 50vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+}
+@media screen and (max-width: 767px) {
+  section {
+    width: 90vw;
+  }
+}
+h1 {
+  padding: 2rem;
+  padding-bottom: 0;
+  text-align: center;
+  color: brown;
+}
+.underline {
+  width: 7rem;
+  height: 0.25rem;
+  background-color: chocolate;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+article {
+  padding: 0.5rem 3rem;
+  border-bottom: 1px solid rgb(230, 222, 222);
+  margin-bottom: 0.5rem;
+}
+article div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h4 + button {
+  width: 1rem;
+  height: 1rem;
+}
+.question {
+  padding: 5rem;
+}
+p {
+  width: 100%;
+  padding-top: 1rem;
+}

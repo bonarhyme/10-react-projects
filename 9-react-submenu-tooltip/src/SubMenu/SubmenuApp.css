@@ -1,0 +1,254 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: ghostwhite;
+  color: #333;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+ul {
+  list-style-type: none;
+}
+.nav {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  z-index: 1;
+  position: relative;
+}
+.nav-center {
+  width: 90vw;
+  max-width: 1170px;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 7px;
+  border-color: transparent;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  transition: all 0.3s linear;
+}
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.nav-links,
+.signin-btn {
+  display: none;
+}
+.hero {
+  position: relative;
+  min-height: 100vh;
+  margin-top: -5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  height: 65%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(./images/hero.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.hero-center {
+  width: 90vw;
+  max-width: 1170px;
+  display: grid;
+  align-items: center;
+}
+.hero-info h1 {
+  text-transform: capitalize;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+.hero-info p {
+  max-width: 35rem;
+  line-height: 1.8;
+}
+.hero-images {
+  display: none;
+}
+.sidebar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s linear;
+  transform: scale(0);
+  visibility: hidden;
+}
+.sidebar-wrapper.show {
+  transform: scale(1);
+  visibility: visible;
+  z-index: 2;
+}
+.sidebar {
+  width: 90vw;
+  height: 90vh;
+  max-width: 620px;
+  background-color: ghostwhite;
+  border-radius: 7px;
+  box-shadow: 0 0 7px #333;
+  position: relative;
+  padding: 4rem 2rem;
+}
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: transparent;
+  border-color: transparent;
+  color: rgb(187, 33, 33);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.close-btn:hover {
+  color: red;
+}
+.sidebar article {
+  margin: 2rem auto;
+}
+h4 {
+  text-transform: capitalize;
+}
+.sidebar-sublinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+a {
+  text-decoration: none;
+}
+.sidebar-sublinks a {
+  padding-top: 0.5rem;
+  color: #333;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+.sidebar-sublinks svg {
+  margin-right: 1rem;
+  color: #444;
+}
+.submenu {
+  background-color: ghostwhite;
+  box-shadow: 0 0 7px #333;
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem;
+  border-radius: 7px;
+  z-index: 3;
+  transition: all 0.3s linear;
+  display: none;
+}
+.submenu::before {
+  content: "";
+  display: block;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid ghostwhite;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.submenu.show {
+  display: block;
+}
+.submenu-center {
+  display: grid;
+  gap: 0.25rem 0.5rem;
+}
+.submenu h4 {
+  margin-bottom: 1.5rem;
+}
+.submenu-center a {
+  color: #444;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (min-width: 850px) {
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+  .toggle-btn {
+    display: none;
+  }
+  .nav-links {
+    display: grid;
+    justify-self: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+  }
+  .nav-links li {
+    height: 100%;
+  }
+  .link-btn {
+    height: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    width: 10rem;
+  }
+  .signin-btn {
+    display: block;
+  }
+  .hero-center {
+    grid-template-columns: 2fr 1fr;
+  }
+  .hero-info h1 {
+    font-size: 3rem;
+  }
+  .hero-info p {
+    font-size: 1.25rem;
+  }
+  .hero-images {
+    display: block;
+  }
+  .sidebar-wrapper {
+    display: none;
+  }
+}

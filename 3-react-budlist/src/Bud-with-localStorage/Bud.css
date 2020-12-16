@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.1rem;
+  background-color: honeydew;
+  color: #333;
+  line-height: 1.5;
+}
+.section-center {
+  width: 90vw;
+  max-width: 35rem;
+  margin: 5rem auto 0 auto;
+  border-radius: 7px;
+  padding: 1rem 2rem 2rem 2rem;
+  box-shadow: 0 0 10px 0 rgb(198, 245, 188);
+  transition: all 0.5s ease-out;
+}
+.section-center:hover {
+  box-shadow: 0 0 10px 0 rgb(51, 37, 35);
+}
+.clear-btn {
+  width: 10rem;
+  height: 1.5rem;
+  display: block;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  border-color: transparent;
+  background-color: transparent;
+  color: red;
+}
+.clear-btn:focus {
+  outline: 1px solid red;
+}
+.clear-btn:active {
+  box-shadow: 0 0 3px 3px red;
+  border: 1px solid red;
+}
+h3 {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.form-control {
+  display: flex;
+  justify-content: center;
+}
+.submit-btn {
+  width: 5rem;
+  height: 1.3rem;
+  letter-spacing: 1px;
+  border-color: transparent;
+  background-color: rgb(84, 200, 236);
+  color: #333;
+  font-size: 0.9rem;
+}
+.submit-btn:focus,
+.submit-btn:hover {
+  outline: 1px solid rgb(41, 102, 151);
+}
+.submit-btn:active {
+  box-shadow: 0 0 3px 3px rgb(14, 112, 177);
+  border: 1px solid rgb(29, 107, 209);
+}
+.bud {
+  padding-left: 1rem;
+  flex: 1 0 auto;
+}
+article {
+  margin: 2rem auto;
+}
+.single-item {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  transition: all 0.5s linear;
+}
+.single-item:hover {
+  background-color: rgb(227, 235, 227);
+}
+.single-item p {
+  flex: 1 0 auto;
+  padding-left: 0.25rem;
+}
+.trash {
+  color: red;
+  background-color: transparent;
+  padding: 0 0.5rem;
+  border-color: transparent;
+}
+.trash:focus {
+  outline-color: red;
+}
+.edit {
+  color: rgb(84, 200, 236);
+  background-color: transparent;
+  padding: 0 0.5rem;
+  border-color: transparent;
+}
+.edit:focus {
+  outline-color: rgb(84, 200, 236);
+}
+.alert-success {
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: rgb(155, 243, 66);
+  opacity: 0.8;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.alert-danger {
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: rgb(255, 184, 184);
+  opacity: 0.8;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
